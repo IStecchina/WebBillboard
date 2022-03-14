@@ -14,9 +14,9 @@ namespace WebBillboard.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IGateway _gateway;
+        private readonly IStudentGateway _gateway;
 
-        public HomeController(ILogger<HomeController> logger, IGateway gateway)
+        public HomeController(ILogger<HomeController> logger, IStudentGateway gateway)
         {
             _logger = logger;
             _gateway = gateway;
@@ -27,7 +27,7 @@ namespace WebBillboard.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult About()
         {
             return View();
         }

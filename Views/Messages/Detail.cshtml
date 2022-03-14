@@ -1,0 +1,22 @@
+﻿@model Message
+
+@{
+    ViewData["Title"] = "Message details";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title text-left">@Model.Title</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-left">@Model.Author</h6>
+            <p class="card-text text-left">@Model.Body</p>
+            <div class="card-footer">
+                <p>Posted: @Model.Created</p>
+                <p>Updated: @Model.Updated</p>
+                <p>Message ID: @Model.ID</p>
+                <a class="btn btn-outline-danger" asp-area="" asp-controller="Messages" asp-action="Delete" asp-route-id=@Model.ID>Delete message</a>
+            </div>
+        </div>
+    </div>
+</div>

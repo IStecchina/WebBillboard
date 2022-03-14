@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace WebBillboard.Abstract
 {
-    public interface IGateway
+    public interface IStudentGateway
     {
         IEnumerable<string> GetStudents();
     }

@@ -29,7 +29,8 @@ namespace WebBillboard
             services.AddOptions<AppOptions>()
                 .Bind(Configuration.GetSection("AppOptions"))
                 .ValidateDataAnnotations();
-            services.AddSingleton<IGateway, Gateway>();
+            services.AddSingleton<IStudentGateway, StudentGateway>();
+            services.AddSingleton<IMessageGateway, MessageGateway>();
             services.AddControllersWithViews();
         }
 
