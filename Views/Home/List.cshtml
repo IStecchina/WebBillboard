@@ -1,0 +1,19 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewData["Title"] = "List";
+}
+<div class="text-center">
+    @if (!Model.Any())
+    {
+        <div>Loading...</div>
+        return;
+    }
+    <h1 class="display-4">List</h1>
+    <ul>
+        @foreach (var student in Model)
+        {
+            <li>@student</li>
+        }
+    </ul>
+</div>
