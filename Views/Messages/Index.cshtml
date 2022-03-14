@@ -12,10 +12,11 @@
             <li class="list-group-item">
                 <div class="card" style="width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title text-left">@message.Title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted text-left">@message.Author</h6>
+                        <h5 class="card-title">@message.Title</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">@message.Author</h6>
                         @Html.ActionLink("Details", "Detail", "Messages", new { id = @message.ID }, new { @class = "btn btn-outline-primary" })
-                        <a class="btn btn-outline-secondary" asp-area="" asp-controller="Messages" asp-action="Detail" asp-route-id=@message.ID>Details (again)</a>
+                        <!--Alternative syntax
+                            <a class="btn btn-outline-secondary" asp-area="" asp-controller="Messages" asp-action="Detail" asp-route-id=@message.ID>Details (again)</a>-->
                     </div>
                 </div>
             </li>
